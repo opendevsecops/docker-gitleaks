@@ -1,0 +1,5 @@
+title = "AWS Enumeration"
+
+[[regexes]]
+description = "AWS ARN"
+regex = '''arn:aws:.*'''
