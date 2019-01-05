@@ -1,8 +1,28 @@
-FROM circleci/golang:latest
+FROM golang:alpine as build
 
-WORKDIR /
+WORKDIR /build
+
+RUN true \
+	&& apk --no-cache add \
+		git
 
 RUN true \
     && go get -u github.com/zricethezav/gitleaks
 
-ENTRYPOINT ["gitleaks"]
+# ---
+
+FROM opendevsecops/launcher:latest as launcher
+
+# ---
+
+FROM alpine:latest
+
+WORKDIR /run
+
+COPY --from=build /go/bin/gitleaks /bin/gitleaks
+
+COPY --from=launcher /bin/launcher /bin/launcher
+
+WORKDIR /session
+
+ENTRYPOINT ["/bin/launcher", "/bin/gitleaks"]
