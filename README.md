@@ -7,7 +7,7 @@
 
 # Gitleaks
 
-Gitleaks provides a way for you to find secrets and other sensitive information in git source code repositories.
+Gitleaks finds secrets and other sensitive information in git source code repositories.
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ Extensive documentation how to use this tool is available in the offical [docs](
 docker run opendevsecops/gitleaks --repo=https://github.com/opendevsecops/docker-gitleaks
 ```
 
-## Tips & Tricks
+## Configs
 
 This container comes with a number of configs to support various types of tasks.
 
