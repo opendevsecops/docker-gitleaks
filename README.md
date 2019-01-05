@@ -5,10 +5,32 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/76f31a952a244277a92f42d0de3f833b)](https://www.codacy.com/app/OpenDevSecOps/docker-gitleaks?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=opendevsecops/docker-gitleaks&amp;utm_campaign=Badge_Grade)
 [![Follow on Twitter](https://img.shields.io/twitter/follow/opendevsecops.svg?logo=twitter)](https://twitter.com/opendevsecops)
 
-# Getting Started
+# Gitleaks
+
+Gitleaks provides a way for you to find secrets and other sensitive information in git source code repositories.
+
+## Getting Started
 
 This container is built automatically by Docker Hub. Simply pull to get latest build.
 
 ```sh
 docker pull opendevsecops/gitleaks
+```
+
+Extensive documentation how to use this tool is available in the offical [docs](https://github.com/megafork/gitleaks). All command-line options can be supplied directly to the container entrypoint. For example to scan this repository use the following docker command:
+
+```sh
+docker run opendevsecops/gitleaks --repo=https://github.com/opendevsecops/docker-gitleaks
+```
+
+## Tips & Tricks
+
+This container comes with a number of configs to support various types of tasks.
+
+### aws-enum.toml
+
+This config looks for AWS-specific leaks to help identify AWS account ids and other types of data which can be used to enumerate AWS resources.
+
+```sh
+docker run opendevsecops/gitleaks --config=/run/configs/aws-enum.toml --github-org=target
 ```
