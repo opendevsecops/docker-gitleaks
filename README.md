@@ -7,7 +7,7 @@
 
 # Gitleaks
 
-This is the docker container for Zachary Rice Gitleaks. Gitleaks finds secrets and other sensitive information in git source code repositories.
+This is the docker container for Zachary Rice [Gitleaks](https://github.com/zricethezav/gitleaks).
 
 ## Getting Started
 
