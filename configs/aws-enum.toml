@@ -2,7 +2,7 @@ title = "AWS Enumeration"
 
 [[regexes]]
 description = "AWS Secrets"
-regex = '''AKIA[0-9A-Z]{16}''
+regex = '''AKIA[0-9A-Z]{16}'''
 
 [[regexes]]
 description = "AWS ARN"
