@@ -43,3 +43,7 @@ regex = '''.*\.s3\.amazonaws\.com'''
 [[regexes]]
 description = "AWS S3 002"
 regex = '''.*\.s3-website.+?\.amazonaws\.com'''
+
+[[regexes]]
+description = "AWS CloudFront"
+regex = '''.*\.cloudfront\.net'''
