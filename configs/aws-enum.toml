@@ -47,3 +47,7 @@ regex = '''.*\.s3-website.+?\.amazonaws\.com'''
 [[regexes]]
 description = "AWS CloudFront"
 regex = '''.*\.cloudfront\.net'''
+
+[[regexes]]
+description = "AWS API Gateway"
+regex = '''execute-api\..+?\.amazonaws\.com'''
