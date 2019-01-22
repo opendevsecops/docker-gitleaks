@@ -7,7 +7,7 @@
 
 # Gitleaks
 
-This is the docker container for Zachary Rice [Gitleaks](https://github.com/zricethezav/gitleaks).
+This docker container includes Zachary Rice [Gitleaks](https://github.com/zricethezav/gitleaks) with a few extras.
 
 ## Getting Started
 
