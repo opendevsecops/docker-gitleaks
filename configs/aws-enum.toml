@@ -37,12 +37,16 @@ description = "AWS ElasticCache"
 regex = '''.*\.cache\.amazonaws\.com'''
 
 [[regexes]]
-description = "AWS S3 001"
+description = "AWS S3 Endpoint 001"
 regex = '''.*\.s3\.amazonaws\.com'''
 
 [[regexes]]
-description = "AWS S3 002"
+description = "AWS S3 Endpoint 002"
 regex = '''.*\.s3-website.+?\.amazonaws\.com'''
+
+[[regexes]]
+description = "AWS S3 Bucket"
+regex = '''s3://[a-z0-9-.]+'''
 
 [[regexes]]
 description = "AWS CloudFront"
